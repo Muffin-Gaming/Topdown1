@@ -8,14 +8,9 @@ vspd = lengthdir_y(len,dir);
 
 // Move
 
-
- if (dash_key && (xaxis < 0 or yaxis < 0 or xaxis >0 or yaxis >0)){
-   state = scr_dash_state;
-   alarm[0] = room_speed/7;
-}
 if (attack_key) {
 image_index = 0;
-state = scr_attack_state;
+state = scr_fire_state;
 }
 //get direction
 dir = point_direction(0, 0, xaxis, yaxis);
@@ -32,15 +27,15 @@ image_speed = .5
 if (len == 0) image_index = 0;
 
 if (vspd > 0) {
-sprite_index = spr_joey_down;
+sprite_index = splayer1d;
 } else if (vspd < 0) {
-sprite_index = spr_joey_up;
+sprite_index = splayer1u;
 }
 
 if (hspd > 0) {
-sprite_index = spr_joey_right;
+sprite_index = splayer1r;
 } else if (hspd < 0) {
-sprite_index = spr_joey_left;
+sprite_index = splayer1l;
 }
 
 

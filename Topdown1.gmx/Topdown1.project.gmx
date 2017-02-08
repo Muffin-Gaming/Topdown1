@@ -7,9 +7,17 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="players">
-      <sprite>sprites\splayer1h</sprite>
-      <sprite>sprites\splayer1v</sprite>
+      <sprite>sprites\splayer1r</sprite>
+      <sprite>sprites\sgun</sprite>
+      <sprite>sprites\splayer1l</sprite>
+      <sprite>sprites\splayer1rshoot</sprite>
+      <sprite>sprites\splayer1lshoot</sprite>
+      <sprite>sprites\splayer1d</sprite>
+      <sprite>sprites\splayer1u</sprite>
+      <sprite>sprites\splayer1dshoot</sprite>
+      <sprite>sprites\splayer1ushoot</sprite>
     </sprites>
+    <sprite>sprites\sbullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -17,10 +25,17 @@
     <script>scripts\scr_get_input.gml</script>
     <script>scripts\scr_attack_state.gml</script>
     <script>scripts\scr_move_state.gml</script>
+    <script>scripts\scr_fire_state.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\ocollision</object>
+    <object>objects\ogun</object>
     <object>objects\oplayer1</object>
+    <object>objects\obullet</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

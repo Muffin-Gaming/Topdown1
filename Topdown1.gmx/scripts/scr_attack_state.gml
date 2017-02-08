@@ -1,25 +1,24 @@
 ///scr_attack_state
 
-image_speed = 2;
+image_speed = .5;
 
 switch (sprite_index) {
-case spr_joey_down: 
-sprite_index = spr_joey_attack_down;
+case splayer1u: 
+sprite_index = splayer1ushoot;
 vspd = 0;
 break;
 
-case spr_joey_left:
-sprite_index = spr_joey_attack_left;
+case splayer1r:
+sprite_index = splayer1rshoot;
+hspd = 0;
+break;
+case splayer1l:
+sprite_index = splayer1lshoot;
 hspd = 0;
 break;
 
-case spr_joey_right:
-sprite_index = spr_joey_attack_right;
-hspd = 0;
-break;
-
-case spr_joey_up: 
-sprite_index = spr_joey_attack_up;
+case splayer1d: 
+sprite_index = splayer1dshoot;
 vspd = 0;
 break;
 
@@ -28,37 +27,37 @@ break;
 
 
 
-if (image_index >= 3 and attacked == false) {
+if (image_index >= 0 and attacked == false) {
  var xx = 0;
  var yy = 0;
       switch (sprite_index) {
-          case spr_joey_attack_down:
+          case splayer1dshoot:
           xx = x;
           yy = y+40;
           break;
         
      
-          case spr_joey_attack_up:
+          case splayer1ushoot:
           xx = x;
           yy = y-30;
           break;
      
      
      
-          case spr_joey_attack_right:
+          case splayer1rshoot:
           xx = x+30;
           yy = y+10;
           break;
     
      
-          case spr_joey_attack_left:
+          case splayer1lshoot:
           xx = x-30;
           yy = y+10;
           break;
           
      }
      
-    var damage = instance_create(xx, yy, obj_damage);
+    var damage = instance_create(xx, yy, obullet);
     damage.creator = id;
     attacked = true;
 
